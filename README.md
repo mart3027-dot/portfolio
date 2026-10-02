@@ -2,4 +2,4 @@
 
 Basic HTML skeleton for MI 349 portfolio project.
 
-![alt text]( "Validation Screenshot")
+![alt text](images/validation.png "Validation Screenshot")
