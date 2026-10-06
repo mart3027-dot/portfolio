@@ -6,17 +6,22 @@
     <meta name="author" content="Henry Martin">
     <meta name="description" content="Portfolio">
     <title>Portfolio</title>
+    <link href="portfolio.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+    </style>
 </head>
 <body>
     <header>
-        <a href="#"><img src="images/logotest.png" alt = "HEM logo"></a>
         <nav class="menu">
-        <ol>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ol>
-    </nav>
+            <a href="#"><img src="images/logotest.png" alt = "HEM logo" width = 100 height = 100 class = "headerimg"></a>
+            <ol class="navlist">
+                <li><a href="#about" class="navtext">About</a></li>
+                <li><a href="#projects" class="navtext">Projects</a></li>
+                <li><a href="#contact" class="navtext">Contact</a></li>
+            </ol>
+            <a href="#"><img src="images/logotest.png" alt = "HEM logo" width = 100 height = 100 class = "rightspacer"></a>
+        </nav>
     </header>
     <main>
     <section>
@@ -37,7 +42,7 @@
             <h3>SHOLBUK!</h3>
             <p>Small survival game made to test data management & implementation of mechanics
             interfacing with a large gameworld. Players can extract resources from a 3D environment,
-            craft new objects, and place those objects in a dynamiclly updating world.
+            craft new objects, and place those objects in a dynamically updating world.
             </p>
             <figure>
                 <img src="images/sholbuk!.png" alt="image of SHOLBUK, showing gameworld">
@@ -79,3 +84,4 @@
     </main>
 </body>
 </html>
+
