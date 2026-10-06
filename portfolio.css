@@ -6,7 +6,10 @@
     --teal: #028090ff;
     --ocean-blue: #0090c1ff;
 }
-
+body{
+    background-color: var(--ocean-blue);
+    text-align: center;
+}
 .menu{
     border: 2px solid var(--color);
     background-color: var(--teal);
