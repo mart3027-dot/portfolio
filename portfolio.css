@@ -16,7 +16,8 @@ body{
     background-color: var(--background-middle);
     color: var(--text-color);
     border-radius: 10px;
-    
+    margin-left:20%;
+    margin-right:20%;
 
     transition: background-color 0.3s ease;
 }
@@ -46,10 +47,71 @@ li a {
     cursor:pointer;
 }
 section{
+    border: 5px solid var(--color);
     background-color: var(--background);
     color: var(--color);
+    margin-top: 5px;
+    margin-right: 20%;
+    margin-left: 20%;
 }
-
-img{
-    filter: drop-shadow(5px, 5px);
+article{
+    position:relative;
+}
+h2{
+    font-weight:600;
+    font-size:100px;
+}
+h3{
+    float:left;
+    font-weight:500;
+    font-size:50px;
+    margin-left:20px;
+}
+figcaption{
+    transform:rotate(-20deg);
+    background-color: var(--complement);
+    border: 3px solid var(--color);
+    box-shadow: 5px 5px;
+    border-radius: 10px;
+    margin-left: 40%;
+    margin-right: 25%;
+    text-align:center;
+    position:relative;
+    top: -355px;
+    left: 405px;
+}
+figure {
+    margin-bottom:-70px;
+}
+.bodyimg{
+    border: 5px solid var(--text-color);
+    box-shadow: 5px 5px;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    transform: rotate(-20deg);
+    top: -350px;
+    left: 400px;
+}
+.projecttext{
+    float:left;
+    font-weight:400;
+    font-size:30px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 50%;
+    margin-right:50%;
+}
+.contacttext {
+    font-size: 50px;
+    font-weight: 300;
+    font-family: 'Quicksand', sans-serif;
+    margin-top:auto;
+    margin-bottom:40px;
+}
+.footertext {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Quicksand', sans-serif;
 }
