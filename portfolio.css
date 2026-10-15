@@ -29,7 +29,7 @@ body{
     margin-right: auto;
 }
 .navlist{
-     list-style: none;
+    list-style: none;
     margin: auto;
     padding: 0;
     overflow: hidden;
@@ -74,14 +74,24 @@ section{
     margin-right: 20%;
     margin-left: 20%;
 }
+/* Two prompts were used to build upon the already existing projects section, cleaning it up to make it more
+ mobile-compliant and refine the look of the site.
+Prompts: 
+Editing only my portfolio file, modify the projects section of the CSS so that the area between each article 
+is reduced significantly in size. Make sure that the gap between each is consistent in size, and that the 
+change works well on mobile devices. 
+
+Reduce the size of each article in the projects section (specifically cutting out the dead space near the 
+bottom of each article) without changing the current look of the file or modifying index.html. Ensure the new 
+CSS file is still mobile-compliant.*/
 #projects{
     display: grid;
-    grid-template-rows: 1fr, repeat(3, 2fr);
+    row-gap: 0.75rem;
 }
 article{
     display: grid;
     grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(10, 0.3fr);
+    grid-template-rows: repeat(9, 0.3fr);
 }
 h2{
     font-weight:700;
@@ -123,7 +133,7 @@ figure {
     grid-column-start: 8;
     grid-column-end: 16;
     grid-row-start: 1;
-    grid-row-end: 10;
+    grid-row-end: 9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,4 +175,139 @@ figure {
     font-size: 20px;
     font-weight: 300;
     font-family: 'Quicksand', sans-serif;
+}
+@media (max-width: 1000px) and (min-width: 800px){
+    section{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    h2 {
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+    }
+    h3 {
+        font-size: clamp(1.5rem, 8vw, 2.25rem);
+        padding: 0.5rem;
+        margin: 0;
+    }
+    .navtext{
+        font-size: 5vw;
+    }
+    li {
+        margin: 5px;
+    }
+    li a {
+        padding: 5px;
+    }
+}
+@media (max-width: 800px) and (min-width: 600px){
+    section{
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+    }
+    h2 {
+        font-size: clamp(1.5rem, 8vw, 3rem);
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+    }
+    h3 {
+        font-size: clamp(1.5rem, 8vw, 2.25rem);
+        padding: 0.5rem;
+        margin: 0;
+    }
+    #about > .abouttext {
+        padding: 0.5rem;
+        font-size: clamp(1rem, 6vw, 1.5rem);
+    }
+    #projects article > .projecttext{
+        padding: 0.5rem;
+        font-size: clamp(1rem, 6vw, 1.5rem);
+    }
+    .navtext{
+        font-size: 5vw;
+    }
+    li {
+        margin: 5px;
+    }
+    li a {
+        padding: 5px;
+    }
+}
+@media (max-width: 600px) {
+    .navlist{
+        display: flex;
+        flex-direction: column;
+    }
+    .headerimg{
+        width: 30vw;
+        height: 30vw;
+    }
+    .navtext{
+        font-size: 3vw;
+    }
+    .rightspacer{
+        display:none;
+    }
+    section{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    section > h1{
+        font-size: clamp(1rem, 10vw, 2rem);
+    }
+    #contact > h2{
+        font-size: clamp(2rem, 10vw, 3.5rem);
+    }
+    #contact > address{
+        font-size: clamp(1rem, 8vw, 2rem);
+    }
+    #about > h2{
+        font-size: clamp(2rem, 10vw, 3.5rem);
+    }
+    #about > .abouttext {
+        padding: 0.5rem;
+        font-size: clamp(1rem, 6vw, 1.5rem);
+    }
+    /* clarification - all #projects rules were set up using a copilot prompt - see above
+    #projects for the prompts used */
+    #projects {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #projects > h2 {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+    }
+    #projects article {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        gap: 0.75rem;
+    }
+    #projects article > h3 {
+        grid-column: 1;
+        grid-row: auto;
+        font-size: clamp(1.5rem, 8vw, 2.25rem);
+        padding: 0.5rem;
+        margin: 0;
+    }
+    #projects article > .projecttext {
+        float: none;
+        grid-column: 1;
+        grid-row: auto;
+        font-size: 1rem;
+        padding: 0.75rem;
+        margin: 0;
+    }
+    #projects article > figure {
+        grid-column: 1;
+        grid-row: auto;
+        margin: 0;
+        transform: none;
+    }
+    #projects article .bodyimg {
+        height: auto;
+        max-height: none;
+    }
 }
