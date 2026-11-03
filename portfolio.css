@@ -58,7 +58,7 @@ li a {
 }
 .navtext{
     background-color: var(--background-middle);
-    color: var(--color);
+    color: var(--text-color);
     font-size: 50px;
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
@@ -248,7 +248,7 @@ figure {
         height: 30vw;
     }
     .navtext{
-        font-size: 3vw;
+        font-size: 5vw;
     }
     .rightspacer{
         display:none;
