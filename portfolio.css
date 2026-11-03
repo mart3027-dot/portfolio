@@ -58,7 +58,7 @@ li a {
 }
 .navtext{
     background-color: var(--background-middle);
-    color: var(--text-color);
+    color: var(--color);
     font-size: 50px;
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
