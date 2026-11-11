@@ -11,6 +11,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
     </style>
     <link rel="icon" type="image/jpg" href="images/logotest.png">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <header>
@@ -25,9 +26,13 @@
         </nav>
     </header>
     <main>
+    <button class="darkbutton"><img class="sunlogo" src="images/sunlogo.png" width=80% aspect-ratio=1/1></img></button>
     <section>
         <h1 class="contrasttext">Henry Martin - Technical designer, technical artist and programmer out of Michigan.</h1>
     </section>
+    <script>
+		ScrollReveal().reveal('#about');
+	</script>
     <section id="about">
         <h2>About</h2>
         <p class="abouttext">I'm currently a junior at Michigan State University, studying for both a major in Games and Interactive Media 
@@ -39,46 +44,64 @@
     </section>
     <section id="projects">
         <h2>Projects</h2>
-        <article>
+        <article class="sholbuk">
             <h3>SHOLBUK!</h3>
             <p class="projecttext">Small survival game made to test data management & implementation of mechanics
             interfacing with a large gameworld. Players can extract resources from a 3D environment,
             craft new objects, and place those objects in a dynamically updating world.
             </p>
             <figure>
-                <img src="images/sholbuk!.png" alt="image of SHOLBUK, showing gameworld" class = "bodyimg">
-                <figcaption>a screenshot of SHOLBUK!'s procedurally generated gameworld</figcaption>
+                <img src="images/sholbuk!.png" alt="image of SHOLBUK, showing gameworld" class = "bodyimg" id="sholbukimg">
+                <figcaption id="sholbukimg">a screenshot of SHOLBUK!'s procedurally generated gameworld</figcaption>
             </figure>
         </article>
-        <article>
+        <script>
+		    ScrollReveal().reveal('.sholbuk', { delay : 10 });
+            ScrollReveal().reveal('#sholbukimg', { delay : 300 });
+	    </script>
+        <article class="rigidity">
             <h3>RIGIDITY</h3>
             <p class="projecttext">Project designed to test the creation of unique shaders to create a heavily stylized
             3D environment, using a combination of a depth-based outline shader and flat, monochromatic
             materials to create an aesthetically unique gameworld.
             </p>
             <figure>
-                <img src="images/rigidity.png" alt="image of RIGIDITY" class = "bodyimg">
-                <figcaption>a screenshot of RIGIDITY, showing an outline depth shader & monochrome materials being used to achieve a stylized look</figcaption>
+                <img src="images/rigidity.png" alt="image of RIGIDITY" class = "bodyimg" id="rigidityimg">
+                <figcaption id="rigidtyimg">a screenshot of RIGIDITY, showing an outline depth shader & monochrome materials being used to achieve a stylized look</figcaption>
             </figure>
         </article>
-        <article>
+        <script>
+		    ScrollReveal().reveal('.rigidity', { delay : 10 });
+            ScrollReveal().reveal('#rigidityimg', { delay : 300 });
+	    </script>
+        <article class="toobik">
             <h3>toobik</h3>
             <p class="projecttext">2D solo project made in a week, with the primary goal being to create a reasonably polished
             and complete game within a small timespan. Primary technical challenges included the creation 
             of an effective roguelike leveling system and efficient UI management.
             </p>
             <figure>
-                <img src="images/toobik.png" alt="image of toobik" class = "bodyimg">
-                <figcaption>toobik gameplay - player can rotate shield around to block incoming projectiles from hitting the central circle.</figcaption>
+                <img src="images/toobik.png" alt="image of toobik" class = "bodyimg" id="toobikimg">
+                <figcaption id="toobikimg">toobik gameplay - player can rotate shield around to block incoming projectiles from hitting the central circle.</figcaption>
             </figure>
         </article>
+        <script>
+		    ScrollReveal().reveal('.toobik', { delay : 10 });
+            ScrollReveal().reveal('#toobikimg', { delay : 300 });
+	    </script>
     </section>
+    <script>
+		ScrollReveal().reveal('#projects');
+	</script>
     <section id="contact">
         <h2>Contact</h2>
         <address class="contacttext">
             mart3027@msu.edu
         </address>
     </section>
+    <script>
+		ScrollReveal().reveal('#contact');
+	</script>
     <footer>
         <p class="footertext">Copyright &copy; 2026 Henry Martin</p>
     </footer>

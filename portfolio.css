@@ -5,6 +5,9 @@
     --background: #8e4162ff;
     --background-middle: #028090ff;
     --background-body: #0090c1ff;
+    --inverted-color: whitesmoke;
+    --inverted-text-color: #0b0033ff;
+    
 }
 body{
     background-color: var(--background-body);
@@ -69,6 +72,28 @@ li a {
     background-color:var(--background-body);
     cursor:pointer;
 }
+.darkbutton{
+    background-color:var(--text-color);
+    border: none;
+    outline: none;
+    border-radius:50%;
+    bottom:5%;
+    right:2%;
+    position:fixed;
+    height:7%;
+    aspect-ratio: 1/1;
+    transition: background-color 0.3s ease;
+}
+.sunlogo{
+    transition: filter 0.3s ease;
+}
+.darkbutton:hover{
+    background-color:var(--color);
+    cursor:pointer;
+}
+.darkbutton:hover .sunlogo{
+    filter:invert(100%);
+}
 section{
     border: 5px solid var(--color);
     background-color: var(--background);
@@ -111,6 +136,7 @@ h2{
     border: 3px solid var(--color);
     box-shadow: 5px 5px;
     border-radius: 10px;
+    padding:10px;
 }
 h3{
     font-weight:600;
