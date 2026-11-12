@@ -5,9 +5,10 @@
     --background: #8e4162ff;
     --background-middle: #028090ff;
     --background-body: #0090c1ff;
-    --inverted-color: whitesmoke;
-    --inverted-text-color: #0b0033ff;
-    
+    --dark-color: whitesmoke;
+    --dark-text-color: whitesmoke;
+    --dark-background-body: #121110;
+    --dark-background-middle: #302f2e;
 }
 body{
     background-color: var(--background-body);
@@ -73,7 +74,7 @@ li a {
     cursor:pointer;
 }
 .darkbutton{
-    background-color:var(--text-color);
+    background-color:var(--color);
     border: none;
     outline: none;
     border-radius:50%;
@@ -85,14 +86,15 @@ li a {
     transition: background-color 0.3s ease;
 }
 .sunlogo{
+    filter: invert(100%);
     transition: filter 0.3s ease;
 }
 .darkbutton:hover{
-    background-color:var(--color);
+    background-color:var(--text-color);
     cursor:pointer;
 }
 .darkbutton:hover .sunlogo{
-    filter:invert(100%);
+    filter:invert(0%);
 }
 section{
     border: 5px solid var(--color);
@@ -101,6 +103,7 @@ section{
     margin-top: 5px;
     margin-right: 20%;
     margin-left: 20%;
+    padding: 10px;
 }
 /* Two prompts were used to build upon the already existing projects section, cleaning it up to make it more
  mobile-compliant and refine the look of the site.
