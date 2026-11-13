@@ -13,21 +13,57 @@ window.onload = function() {
     const sunLogo = document.getElementsByClassName("sunlogo");
     const sections = document.getElementsByTagName("section");
     const thisStyle = window.getComputedStyle(document.body);
+    const root = document.querySelector(':root');
+    const color = thisStyle.getPropertyValue('--color');
+    const textcolor = thisStyle.getPropertyValue('--text-color');
+    const complement = thisStyle.getPropertyValue('--complement');
+    const background = thisStyle.getPropertyValue('--background');
+    const backgroundmiddle = thisStyle.getPropertyValue('--background-middle');
+    const backgroundbody = thisStyle.getPropertyValue('--background-body');
+    const darkcolor = 'whitesmoke';
+    const darkbackground = '#383838';
+    const darkbackgroundbody = '#121110';
+    const darkbackgroundmiddle = '#302f2e';
+    const darkcomplement = '#595c5a';
+    var isdark = false;
 
-    function ShiftBackground(item){
-        item.style.background = thisStyle.getPropertyValue('--dark-background-middle');
-        item.style.borderColor = thisStyle.getPropertyValue('--dark-text-color');
+    function lightMode(){
+        root.style.setProperty('--color', color);
+        root.style.setProperty('--text-color', textcolor);
+        root.style.setProperty('--dark-hover', textcolor);
+        root.style.setProperty('--background-body', backgroundbody);
+        root.style.setProperty('--background-middle', backgroundmiddle);
+        root.style.setProperty('--background', background);
+        root.style.setProperty('--complement', complement);
+        root.style.setProperty('--filter', 'invert(0%)');
+        sunLogo[0].style.filter = 'invert(100%)';
+        sunLogo[0].src = 'images/moonlogo.png';
+        isdark = false;
     }
 
-    darkButton[0].addEventListener("click", function(e){
-        darkButton[0].style.background = thisStyle.getPropertyValue('--dark-text-color');
+    function darkMode(){
+        root.style.setProperty('--color', darkcolor);
+        root.style.setProperty('--text-color', darkcolor);
+        root.style.setProperty('--dark-hover', backgroundbody);
+        root.style.setProperty('--background-body', darkbackgroundbody);
+        root.style.setProperty('--background-middle', darkbackgroundmiddle);
+        root.style.setProperty('--background', darkbackground);
+        root.style.setProperty('--complement', darkcomplement);
+        root.style.setProperty('--filter', 'invert(100%)');
         sunLogo[0].style.filter = 'invert(0%)';
         sunLogo[0].src = 'images/sunlogo.png';
-        document.body.style.background = thisStyle.getPropertyValue('--dark-background-body');
-        for (i = 0; i < sections.length; i++){
-            ShiftBackground(sections[i]);
-        }
-    });
+        isdark = true;
+    }
 
+    function setMode(e){
+        if (isdark){
+            lightMode();
+        }
+        else {
+            darkMode();
+        }
+    }
+
+    darkButton[0].addEventListener("click", setMode);
     
 }
